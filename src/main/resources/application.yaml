@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: takimaway
+  datasource:
+    url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${POSTGRES_DB:takimaway_db}
+    username: ${POSTGRES_USER:user}
+    password: ${POSTGRES_PASSWORD:password}
+  jpa:
+    properties:
+      hibernate:
+        default_schema: takimaway
+        ddl-auto: validate
